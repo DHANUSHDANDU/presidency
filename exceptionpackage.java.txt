@@ -1,0 +1,29 @@
+package exceptionpackage;
+
+public class ExceptionExample {
+	
+	public static void main(String[] ar)
+	{
+		
+		int num1=100,num2=0,res=0;
+		String name=null;
+		try {
+			name.charAt(0);
+			System.out.println("are you executing");
+		res =num1/num2;
+		}catch(NullPointerException ex)//ex = new ArithmeticException();
+		{
+			System.out.println(ex.getClass());
+		}
+		catch(ArithmeticException ex1)
+		{
+			System.out.println("arthmetic exception "+ex1.getMessage());
+		}
+		finally {
+		System.out.println("division is done");
+		}
+		System.out.println(res);
+		
+	}
+
+}
